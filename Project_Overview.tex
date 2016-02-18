@@ -1,0 +1,118 @@
+\documentclass[paper=a4, onecolumn, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+\renewcommand{\thesection}{\Roman{section}} 
+
+\renewcommand{\thesubsection}{\Roman{subsection}}
+\usepackage{graphicx}
+\usepackage{float}
+%\usepackage[style=numeric]{biblatex}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{titling}
+\usepackage{color}
+\usepackage{url}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{sectsty} % Allows customizing section commands
+%\usepackage[a4paper,bindingoffset=0.2in,top=0.8in,bottom=0.8in,footskip=.25in]{geometry}
+%\usepackage{ctable} %Allows extended table modifying
+
+\allsectionsfont{\normalfont\scshape\centering} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{0pt} % Customize the height of the header
+
+%\addtolength{\oddsidemargin}{-.15in}
+%\addtolength{\evensidemargin}{-.15in}
+%\addtolength{\textwidth}{0.3in}
+
+%\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+%\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+%\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+%\addbibresource{refs.bib}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+\title{\vspace{-7mm}ELEN4009: Software Engineering
+\\ Project Description}
+\date{\vspace{-5ex}}
+%\date{\normalsize\today}
+\author{Ari Croock: 718005\\Kanaka Babshet: 678851\\Alice Yang: 597609\\Daniel Weinberg: 547937}
+
+\begin{document}
+	
+	\maketitle
+	\vspace{-7mm}
+	
+	\section{Description}
+	
+	This project entails the design of the power management system of a smart home network. The system allows the user to configure the behaviour of each device based on user's requirements. 
+	\\\\
+	The features to be designed are as follows:
+	\begin{itemize}
+		\item Remote on/off switching
+		\item User configurable rules for appliances with triggers such as:
+		\begin{itemize}
+			\item Motion detection
+			\item Temperature detection
+			\item Light detection
+			\item Time scheduling 
+		\end{itemize}
+		\item Power consumption monitoring
+		\item Energy source management
+		\item Human behavioural analysis
+		\item User configured alerts
+	\end{itemize}
+	
+	The front-end would be a webpage accessible to everyone within the household. This page would include:
+	\begin{itemize}
+		\item Authentication
+		\item Manual switches
+		\item Device configuration based on triggers
+		\item Dashboard for diagnostics and measurements
+		\item Adding/removing smart devices on network
+		\item Notification and alert centre
+		\item Communicating with the back-end of the system
+	\end{itemize}
+	The back-end connects and controls the respective devices on the local area network (LAN). Along with this it stores the data required for operation. Specifically, the tasks include: 
+	
+	\begin{itemize}
+		\item Communicating with the front-end
+		\item Providing authentication 
+		\item Storing device information and configurations
+		\item Controlling the device communication 
+		\item Monitoring energy consumption
+	\end{itemize}
+	
+	\section{Responsibilities}
+	Alice and Daniel will be responsible for the front-end of the system, whereas Ari and Kanaka will be responsible for the back-end. However, the group members will assist each other when needed. 
+	
+	\section{Inputs and Outputs}
+	\subsection{Inputs}
+	\begin{itemize}
+	\item Human
+	\item Light
+	\item Heat
+	\item Motion
+	\item Time
+	\end{itemize}
+	
+	\subsection{Outputs}
+	\begin{itemize}
+	\item Switch on/off
+	\item Heating/cooling
+	\item Diagnostics
+	\item Notifications and alerts
+	\item Switching between energy sources
+	\end{itemize}
+	
+\end{document}
