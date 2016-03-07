@@ -38,15 +38,47 @@
 	
 	The back-end provides functionality to control and monitor devices, and to log device power consumption. Additionally, the back-end will contain the web server used for interfacing with users.
 	
-	The front-end will consist of a web-based user interface which will allow secure access to a device dashboard. The dashboard will provide remote control and configuration of devices, as well as access to power consumption data. Addition and removal of IoT devices will also be performed through the dashboard. 
+	The front-end will consist of a web-based user interface which will provide secure access to a device dashboard. The dashboard will provide remote control and configuration of devices, as well as access to power consumption data. Addition and removal of IoT devices will also be performed through the dashboard. 
 	
 	\section{Project Overview}
+	
+	Figure~\ref{fig:dfd} shows a data flow diagram of the system. Data collected from IoT devices is stored in a database and used to control other devices as defined by the user. A web interface allows the user to configure devices and to view the stored data.
 	\begin{figure}
 		\includegraphics[width=\columnwidth]{data-flow-1}
 		\caption{Data flow diagram (DFD) of the system. All data flows are bidirectional}
+		\label{fig:dfd}
 	\end{figure}
 	
+	\subsection{Assumptions}
+	\begin{itemize}
+		\item All of the IoT devices will be connected to the same LAN
+		\item Only a small number of simultaneous users and devices will be connected at once
+	\end{itemize}
+	\subsection{Constraints}
+	\begin{itemize}
+		\item The user interface must be accessible through a web browser
+	\end{itemize}
+	
+	\subsection{User Classes and Characteristics}
+	\begin{itemize}
+		\item Basic users who can configure basic devices and view power usage statistics
+		\item Advanced users who can configure custom devices and export power usage statistics for further processing
+	\end{itemize}
+	
+	\subsection{Operating Environment}
+	Assuming that few users and devices will be connected to the system simultaneously (such as in a typical household), the system requirements are fairly relaxed:
+	\begin{itemize}
+		\item any modern Microsoft Windows or GNU/Linux system that supports the technologies used
+		\item a connection to the LAN, such as Ethernet or WiFi
+		\item low-cost hardware such as a Raspberry Pi
+	\end{itemize}
+	However, depending on the system configuration, an external storage solution may be needed for storing a large amount of power usage data.
+	
 	%3 tier has better security because 2 tier the client is allowed access and communication with 
+	
+	\subsection{Software Development Life-cycle}
+	The system will be developed using an Agile software development methodology. In particular, the popular SCRUM framework will be used so that the system's requirements and design details can change quickly if need be. 
+	
 	
 	\section{System Features}
 	The smart home power system is made up of various features which enhance the usability of the product, along with some additional features which simplify all related functionality.
