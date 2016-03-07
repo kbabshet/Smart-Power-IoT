@@ -1,7 +1,6 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage{amsmath,amsthm, graphicx}
 \usepackage{verbatim}
-
 \title{ELEN4009 - Software Engineering\\Smart Home Power Management System\\Software Requirement Specification}
 \author{Ari Croock (718005)\\Kanaka Babshet (678851)\\Alice Yang (597609)\\Daniel Weinberg (547937)}
 \date{\today}
@@ -32,7 +31,50 @@
 	%3 tier has better security because 2 tier the client is allowed access and communication with 
 	
 	\section{External Interface Requirements}
-	The requirements for the external interface will be illustrated in the following section. The 
+	The external interface is the interface which allows the user to interact with the system through a hardware device using software. The external interfaces consists of a user interface, hardware interface, software interface and communication interface. 
+	
+	\subsection{User Interface - GUI}
+	The user interface is how the user will interact with the system. The requirements for the design of user interface must be simple and easy to navigate. A simple format of representing all the devices connected to the Smart Home Power Management System is to display the features available for all devices on a dashboard. This can been seen in Figure \ref{Home_Dashboard}.
+	
+	\begin{itemize}
+		\item Home Page Dashboard
+			\begin{figure}[h!]
+				\centering
+				\includegraphics[scale=0.5]{Home_Page.png}
+				\caption{Figure illustrating the home page the user will see once they have logged on to access the system.}
+				\label{Home_Dashboard}
+			\end{figure}
+		\item Trigger Tab on Dashboard
+			\begin{figure}[h!]
+				\centering
+				\includegraphics[scale=0.5]{Trigger_Tab.png}
+				\caption{Figure illustrating the triggers tab, to allow users to control switching of sensors in their home through the system.}
+				\label{Trigger_Tab}
+			\end{figure}
+		\pagebreak
+		\item Settings Page
+			\begin{figure}[h!]
+				\centering
+				\includegraphics[scale=0.5]{Settings.png}
+				\caption{Figure illustrating the settings page.}
+				\label{Settings}
+			\end{figure}
+	\end{itemize}
+	
+	
+	\pagebreak
+	\subsection{Hardware Interface}
+	The user interface is implemented on a web based platform that is accessible through a browser. The hardware required to access the system can be either of the listed devices found in the list below:
+	
+	\begin{enumerate}
+		\item Large Desktops (1200 -  pixels)
+		\item Medium Desktops (992 - 1199 pixels)
+		\item Small Devices (768 - 991 pixels)
+		\item Extra Small Devices (max 767 pixels)
+	\end{enumerate}
+	
+	
+	
 	
 	\section{Other Non-Functional Requirements}
 	
