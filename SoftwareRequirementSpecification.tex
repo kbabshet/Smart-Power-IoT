@@ -1,9 +1,27 @@
 \documentclass[11pt, a4paper]{article}
 \usepackage{amsmath,amsthm, graphicx}
 \usepackage{verbatim}
+\usepackage{titlesec}
+
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\def\toclevel@subsubsubsection{4}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+
 \title{ELEN4009 - Software Engineering\\Smart Home Power Management System\\Software Requirement Specification}
 \author{Ari Croock (718005)\\Kanaka Babshet (678851)\\Alice Yang (597609)\\Daniel Weinberg (547937)}
 \date{\today}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 \begin{document}
 	\maketitle
@@ -29,6 +47,50 @@
 	\end{figure}
 	
 	%3 tier has better security because 2 tier the client is allowed access and communication with 
+	
+	\section{System Features}
+	The smart home power system is made up of various features which enhance the usability of the product, along with some additional features which simplify all related functionality.
+	\subsection{System Feature 1 - Remote On/Off Switching} 
+	Switch any of your selected appliances on or off from any personal device connected to the home network. 
+	\subsubsection{Description}
+	The user can control the power of various appliances in the household. The appliances are connected independently, for which reason, multiple appliances can be controlled through the same interface, simultaneously. 
+	\subsubsection{Stimulus/Response Sequences}
+	The user has to select the "Power" tab on the home page to display the on and off options. 
+	\subsubsection{Functional Requirements}
+	\begin{itemize}
+		\item The user must be connected to the internet
+	\end{itemize}
+	
+	\subsection{System Feature 2 - User Configurable Triggers} 
+	Personalise various situations which will trigger an action.
+	\subsubsection{Trigger 1 - Motion Detection}
+	Set appliances to switch on or off depending on surrounding motion. 
+	\subsubsubsection{Description}
+	The user can control whether specific appliances must be configured with motion detection or not. For example, if motion detection is set for a certain set of lights, they will detect movement in the surrounding area and switch on, or switch off when there is no motion detected for a set period of time. If the user does not want a certain appliance or set of lights to be triggered by motion, the corresponding switch is "off" on the webpage. 
+	\subsubsubsection{Stimulus/Response Sequences}	
+	The user has to select the "Triggers" tab from the home page and thereafter select the "Motion Detection" tab at the top left of the newly loaded page to display the corresponding settings.
+	\subsubsection{Trigger 2 - Temperature Detection}
+	Set appliances to switch on or off depending on the surrounding temperature.
+	\subsubsubsection{Description}
+	The user can control whether specific appliances must be configured with heat triggers or not. For example, if temperature detection is set for a certain appliance, it will detect a certain temperature in the surrounding area and switch on, or switch off if it is too hold or too cold depending on the user settings. If the user does not want a certain appliance or set of lights to be triggered by the ambient temperature, the corresponding switch is "off" on the webpage. 
+	\subsubsubsection{Stimulus/Response Sequences}	
+	The user has to select the "Triggers" tab from the home page and thereafter select the "Temperature Detection" tab at the top left of the newly loaded page to display the corresponding settings.
+	\subsubsection{Trigger 3 - Light Detection}
+	\subsubsection{Trigger 4 - Time Scheduling}
+	\subsection{System Feature 3 - Power Consumption Monitoring}
+	Monitor the power consumption by various appliances and sets of lights in the household. 
+	\subsubsection{Description}
+	Since this system is based on power management, the user can easily view a detailed layout of the numerical and percentage power consumption  
+	\subsubsection{Stimulus/Response Sequences}
+	
+	\subsection{System Feature 4 - Energy Source Management}
+	Control and manage the different energy sources in the household such as electricity and solar power. iances and sets of lights in the household. 
+	\subsubsection{Description}
+	\subsubsection{Stimulus/Response Sequences}
+	\subsection{System Feature 6 - User Configurable Alerts} 
+	Choose which events should result in an immediate alert on your system. 
+	\subsubsection{Description}
+	\subsubsection{Stimulus/Response Sequences}
 	
 	\section{External Interface Requirements}
 	The external interface is the interface which allows the user to interact with the system through a hardware device using software. The external interfaces consists of a user interface, hardware interface, software interface and communication interface. 
