@@ -81,34 +81,39 @@
 	
 	
 	\section{System Features}
-	The smart home power system is made up of various features which enhance the usability of the product, along with some additional features which simplify all related functionality.
+	The smart home power management system is made up of various features which enhance the usability of the product, along with some additional features which simplify all related functionality.
 	\subsection{System Feature 1 - Remote On/Off Switching} 
 	Switch any of your selected appliances on or off from any personal device connected to the home network. 
 	\subsubsection{Description}
-	The user can control the power of various appliances in the household. The appliances are connected independently, for which reason, multiple appliances can be controlled through the same interface, simultaneously. 
+	The user can control the power status of various appliances in the household. The appliances are connected independently, for which reason, multiple appliances can be controlled through the same interface, simultaneously. 
 	\subsubsection{Stimulus/Response Sequences}
-	The user has to select the "Power" tab on the home page to display the on and off options. 
-	\subsubsection{Functional Requirements}
-	\begin{itemize}
-		\item The user must be connected to the internet
-	\end{itemize}
+	The user has to select the "Power Remote" tab on the home page to display the on and off options corresponding to each connection. 
+	%\subsubsection{Functional Requirements}
 	
 	\subsection{System Feature 2 - User Configurable Triggers} 
 	Personalise various situations which will trigger an action.
 	\subsubsection{Trigger 1 - Motion Detection}
 	Set appliances to switch on or off depending on surrounding motion. 
 	\subsubsubsection{Description}
-	The user can control whether specific appliances must be configured with motion detection or not. For example, if motion detection is set for a certain set of lights, they will detect movement in the surrounding area and switch on, or switch off when there is no motion detected for a set period of time. If the user does not want a certain appliance or set of lights to be triggered by motion, the corresponding switch is "off" on the webpage. 
+	The user can control whether specific appliances must be configured with motion detection or not. For example, if motion detection is set for a certain set of lights, they will detect movement in the surrounding area and switch on, or switch off when there is no motion detected for a set period of time. If the user does not want an appliance or set of lights to be triggered by motion, the respective switch is "off" on the webpage. 
 	\subsubsubsection{Stimulus/Response Sequences}	
-	The user has to select the "Triggers" tab from the home page and thereafter select the "Motion Detection" tab at the top left of the newly loaded page to display the corresponding settings.
+	The user has to select the "Triggers" tab from the home page and thereafter select the "Motion Detection" tab at the top left of the newly loaded page to display the corresponding settings. Figure \ref{Trigger_Tab} in Section 4 below illustrates this page. 
 	\subsubsection{Trigger 2 - Temperature Detection}
-	Set appliances to switch on or off depending on the surrounding temperature.
+	Set appliance settings to vary depending on the surrounding temperature.
 	\subsubsubsection{Description}
-	The user can control whether specific appliances must be configured with heat triggers or not. For example, if temperature detection is set for a certain appliance, it will detect a certain temperature in the surrounding area and switch on, or switch off if it is too hold or too cold depending on the user settings. If the user does not want a certain appliance or set of lights to be triggered by the ambient temperature, the corresponding switch is "off" on the webpage. 
+	The user can control whether specific appliances must be configured with heat triggers or not. For example, if temperature detection is set for a specific appliance, it will detect a certain temperature in the surrounding area and switch on, switch off, or maintain state if it is too hot, too cold, or within the correct temperature range depending on the user choices. If the user does not want an appliance or set of lights to be triggered by the ambient temperature, the respective switch is "off" on the webpage. 
 	\subsubsubsection{Stimulus/Response Sequences}	
-	The user has to select the "Triggers" tab from the home page and thereafter select the "Temperature Detection" tab at the top left of the newly loaded page to display the corresponding settings.
+	The user has to select the "Triggers" tab from the home page and thereafter select the "Temperature Detection" tab at the top of the newly loaded page, (second from the left), to display the corresponding settings.
 	\subsubsection{Trigger 3 - Light Detection}
+	Set appliance settings to vary depending on the surrounding light.
+	\subsubsubsection{Description}
+	The user can control whether specific appliances must be configured with light triggers or not. For example, if light detection is set for a specific appliance, it will detect a certain ambient light level in the surrounding area and correspondingly vary, or maintain state depending on the user choices. If the user does not want an appliance or set of lights to be triggered by the ambient light levels, the respective switch is "off" on the webpage. 
+	\subsubsubsection{Stimulus/Response Sequences}
+	The user has to select the "Triggers" tab from the home page and thereafter select the "Light Detection" tab at the top of the newly loaded page, (third from the left), to display the corresponding settings.
 	\subsubsection{Trigger 4 - Time Scheduling}
+	Select and adjust times for different appliances to be running, off, 
+	\subsubsubsection{Description}
+	\subsubsubsection{Stimulus/Response Sequences}
 	\subsection{System Feature 3 - Power Consumption Monitoring}
 	Monitor the power consumption by various appliances and sets of lights in the household. 
 	\subsubsection{Description}
@@ -123,6 +128,12 @@
 	Choose which events should result in an immediate alert on your system. 
 	\subsubsection{Description}
 	\subsubsection{Stimulus/Response Sequences}
+	\subsection{System Feature 7 - User Configurable Webpage Settings} 
+	Define webpage settings in order to enhance the power management system experience
+	\subsubsection{Description}
+	The user can add or remove devices to be controlled by the smart home power management system, alter the webpage appearance, manage users on the network and edit security settings. 
+	\subsubsection{Stimulus/Response Sequences}
+	The user must click on the "Settings" link to the right of the title on the home page to be able to configure all the required settings.
 	
 	\section{External Interface Requirements}
 	The external interface is the interface which allows the user to interact with the system through a hardware device using software. The external interfaces consists of a user interface, hardware interface, software interface and communication interface. 
