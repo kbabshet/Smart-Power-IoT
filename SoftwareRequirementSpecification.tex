@@ -27,7 +27,7 @@
 	\maketitle
 	\section{Introduction}
 	\subsection{Purpose}
-	This document details the system requirements specification for the Smart Home Power Management System. The system design document will be developed from this document.\\
+	This document details the system requirements specification (SRS) for the Smart Home Power Management System. The system design documentation will be developed from this information.\\
 	\newline 
 	\noindent
 	With the rapidly growing interest in new Internet of Things (IoT) technologies, networks consisting of these devices will become increasingly difficult to manage and control. Additionally, power consumption and monitoring will become a greater concern, especially in emerging markets such as South Africa.\\
@@ -47,12 +47,12 @@
 	\section{Project Overview}
 	
 	Figure~\ref{fig:dfd} shows a data flow diagram of the system. Data collected from IoT devices is stored in a database and used to control other devices as defined by the user. A web interface allows the user to configure devices and to view the stored data.
-	\begin{figure}
+	\begin{figure}[!htb]
 		\includegraphics[width=\columnwidth]{data-flow-1}
 		\caption{Data flow diagram (DFD) of the system. All data flows are bidirectional}
 		\label{fig:dfd}
 	\end{figure}
-	
+	\newpage
 	\subsection{Assumptions}
 	\begin{itemize}
 		\item All of the IoT devices will be connected to the same LAN
@@ -61,6 +61,7 @@
 	\subsection{Constraints}
 	\begin{itemize}
 		\item The user interface must be accessible through a web browser
+		\item All devices in the system require wireless connectivity
 	\end{itemize}
 	
 	\subsection{User Classes and Characteristics}
@@ -70,6 +71,12 @@
 	\end{itemize}
 	
 	\subsection{Operating Environment}
+	The following technologies will be used to implement the system:
+	\begin{itemize}
+		\item Django Web Framework (Python 3.5.1)
+		\item PostgreSQL Database Management System (DBMS)
+		\item Docker 1.8.2
+	\end{itemize}
 	Assuming that few users and devices will be connected to the system simultaneously (such as in a typical household), the system requirements are fairly relaxed:
 	\begin{itemize}
 		\item any modern Microsoft Windows or GNU/Linux system that supports the technologies used
@@ -128,6 +135,7 @@
 	The webpage automatically starts on the "Home Status" tab upon loading. The user can view this page for a daily consumption summary, and can then click on the "Consumption Monitoring" tab seen on the left of the same page to view these analytics in greater detail, over a longer period of time.
 	\subsection{System Feature 4 - Energy Source Management}
 	Control and manage the different energy sources in the household such as varying the usage between electricity and solar power. 
+	\newpage
 	\subsubsection{Description}
 	This system encourages the use of alternative, renewable energy sources. If the user has catered for these facilities, the system allows additional power volume management through the energy source management configuration. 
 	\subsubsection{Stimulus/Response Sequences}
@@ -165,6 +173,7 @@
 				\caption{Figure illustrating the home page the user will see once they have logged on to access the system.}
 				\label{Home_Dashboard}
 			\end{figure}
+			\pagebreak
 		\item Trigger Tab on Dashboard
 			\begin{figure}[!h]
 				\centering
@@ -172,7 +181,6 @@
 				\caption{Figure illustrating the triggers tab, to allow users to control switching of sensors in their home through the system.}
 				\label{Trigger_Tab}
 			\end{figure}
-		\pagebreak
 		\item Settings Page
 			\begin{figure}[!h]
 				\centering
