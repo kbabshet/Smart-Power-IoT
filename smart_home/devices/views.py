@@ -1,21 +1,28 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views.decorators.csrf import csrf_exempt
+from django.template import RequestContext, loader
 
 from .models import Device
 from .models import DeviceState
 
+#def index(request):
+#    device_list = Device.objects.order_by('device_name')[:10]
+#    response = "\n".join([device.device_name for device in device_list])
+#    return HttpResponse(response)
 
-def index(request):
+def home_page(request):
     device_list = Device.objects.order_by('device_name')[:10]
-    response = "\n".join([device.device_name for device in device_list])
-    return HttpResponse(response)
+    return render(request,"index.html", {'devices': device_list})
 
+def list(request):
+    device_list = Device.objects.order_by('device_name')[:10]
+    return render(request,"device.html", {'devices': device_list})
 
 def detail(request, device_id):
-    return HttpResponse("This is the %s. It is currently %s" % (Device.objects.get(pk=device_id).device_name, DeviceState.objects.get(device__id=device_id)))
-
+	device = get_object_or_404(Device, pk=device_id)
+	return render(request, "detail.html", {'device': device})
 
 @csrf_exempt
 def change_device_state(request, device_id):
@@ -30,4 +37,4 @@ def change_device_state(request, device_id):
         device.current_state = device_state
         device.save()
 
-        return HttpResponseRedirect(reverse("devices:index"))
+        return HttpResponse(device_state.state)
