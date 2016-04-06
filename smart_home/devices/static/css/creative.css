@@ -16,7 +16,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: grey;
     border-width: 3px;
 }
 
@@ -52,7 +52,7 @@ p {
 }
 
 .bg-primary {
-    background-color: darkblue;
+    background-color: purple;
 }
 
 .bg-dark {
@@ -387,7 +387,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary {
     border-color: black;
     color: #fff;
-    background-color: darkblue;
+    background-color: purple;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -400,7 +400,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
     border-color: #ed431f;
-    color: darkblue;
+    color: purple;
     background-color: #ffffff;
 }
 
