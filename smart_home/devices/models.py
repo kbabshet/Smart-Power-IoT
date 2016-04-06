@@ -10,7 +10,7 @@ class DeviceState(models.Model):
 class Device(models.Model):
     device_name = models.CharField(max_length=200)
     serial_num = models.IntegerField()
-    ip_addr = models.GenericIPAddressField()
+    ip_addr = models.GenericIPAddressField(unique=True)
     location = models.ForeignKey('Location', on_delete=models.CASCADE)
     current_state = models.ForeignKey('DeviceState', on_delete=models.CASCADE)
 
@@ -18,7 +18,7 @@ class Device(models.Model):
         return self.device_name
 
     class Meta:
-        unique_together = (('device_name', 'location'),('device_name','ip_addr'))
+        unique_together = (('device_name', 'location'))
 
 class Location(models.Model):
     location_name = models.CharField(max_length=200)
