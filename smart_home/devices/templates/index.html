@@ -74,9 +74,9 @@
 		<header>
 			<div class="header-content">
 				<div class="header-content-inner">
-					<h1>Your Favorite Source of Free Bootstrap Themes</h1>
+					<h1>Your smart home power management system</h1>
 					<hr>
-					<p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+					<p>The optimum way to manage your home power usage</p>
 					<a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
 				</div>
 			</div>
@@ -94,7 +94,7 @@
 						<a href="{% url 'devices:detail' device.id %}"><h3 align="left"> {{ device.device_name }} </h3> </a>
 						<div class="onoffswitch">
 							<form>
-								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{ device.id }}" value="{{ device.device_name }}" checked>
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{ device.id }}" value="{{ device.device_name }}" unchecked>
 								<label class="onoffswitch-label" for="{{ device.id }}">
 									<span class="onoffswitch-inner" onclick=""></span>
 									<span class="onoffswitch-switch"></span>
