@@ -27,6 +27,9 @@ def detail(request, device_id):
     device = get_object_or_404(Device, pk=device_id)
     return render(request, "detail.html", {'device': device})
 
+def login(request):
+	return render(request, "login.html", {})
+
 
 @csrf_exempt
 def change_device_state(request, device_id):
