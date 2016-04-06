@@ -94,7 +94,7 @@
 						<a href="{% url 'devices:detail' device.id %}"><h3 align="left"> {{ device.device_name }} </h3> </a>
 						<div class="onoffswitch">
 							<form>
-								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{ device.id }}" value="{{ device.device_name }}" unchecked>
+								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{ device.id }}" value="{{ device.device_name }}" {% if device.current_state.state == "on" %}checked{% endif %}>
 								<label class="onoffswitch-label" for="{{ device.id }}">
 									<span class="onoffswitch-inner" onclick=""></span>
 									<span class="onoffswitch-switch"></span>
