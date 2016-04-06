@@ -88,10 +88,10 @@
 					<div class="col-lg-8 col-lg-offset-2 text-center">
 						<h2 class="section-heading">Household Linked Devices</h2>
 						<hr class="light">
-						<a href="{% url 'devices:list' %}"><h4 align="left" style="color:black"> All Device Information </h4></a>
+						<a href="{% url 'devices:list' %}"><h4 align="left"> All Device Information </h4></a>
 
 						{% for device in devices.all %}
-						<a href="{% url 'devices:detail' device.id %}"><h3 align="left" style="color: black"> {{ device.device_name }} </h3> </a>
+						<a href="{% url 'devices:detail' device.id %}"><h3 align="left"> {{ device.device_name }} </h3> </a>
 						<div class="onoffswitch">
 							<form>
 								<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{ device.id }}" value="{{ device.device_name }}" checked>
