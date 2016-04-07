@@ -71,11 +71,20 @@ class uniqueMethodTests(TestCase):
             device2.save()
 
 class viewTests(TestCase):
+<<<<<<< Updated upstream
     #test that the home page successfully loads when it is called
     def test_index_view_page(self):
         response = self.client.get(reverse('devices:home_page'))
         self.assertEqual(response.status_code, 200)
     #test that the details page of a specific device loads when it is called
+=======
+    # Tests that the home page successfully loads when its called
+    def test_index_view_page(self):
+        response = self.client.get(reverse('devices:home_page'))
+        self.assertEqual(response.status_code, 200)
+
+    # Tests that the details page of a specific device loads when it is called
+>>>>>>> Stashed changes
     def test_detail_view_page(self):
         kitchen = Location(location_name='kitchen').save()
         device1 = Device(device_name='kettle',serial_num='12345',ip_addr='172.16.254.1',
@@ -86,11 +95,21 @@ class viewTests(TestCase):
 
         response = self.client.get(reverse('devices:detail', kwargs={'device_id': 1}))
         self.assertEqual(response.status_code, 200)
+<<<<<<< Updated upstream
     #test that the list page loads successfully
     def test_list_view_page(self):
         response = self.client.get(reverse('devices:list'))
         self.assertEqual(response.status_code, 200)
     #test that the login pages loads successfully
+=======
+
+    # Tests that the list page loads successfully 
+    def test_list_view_page(self):
+        response = self.client.get(reverse('devices:list'))
+        self.assertEqual(response.status_code, 200)
+
+    # Tests that the login view page loads successfully
+>>>>>>> Stashed changes
     def test_login_view_page(self):
         response = self.client.get(reverse('devices:login'))
         self.assertEqual(response.status_code, 200)

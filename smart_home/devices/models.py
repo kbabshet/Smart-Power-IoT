@@ -6,8 +6,12 @@ class DeviceState(models.Model):
 
     def __str__(self):
         return self.state
+<<<<<<< Updated upstream
 # create a device object and assigns device name, serial number, IP address,
 # location and state
+=======
+        
+>>>>>>> Stashed changes
 class Device(models.Model):
     device_name = models.CharField(max_length=200)
     serial_num = models.IntegerField()
