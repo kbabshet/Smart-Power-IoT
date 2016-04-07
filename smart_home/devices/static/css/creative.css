@@ -520,3 +520,19 @@ body {
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
 }
+input[type="text"] {
+    align-content: center;
+    padding: 10px;
+    display: block;
+    width: 500px;
+    font-size: 12px;
+    border: solid 5px #ffffff
+}
+
+input[type="password"] {
+    padding: 10px;
+    display: block;
+    width: 500px;
+    font-size: 12px;
+    border: solid 5px #ffffff
+}
