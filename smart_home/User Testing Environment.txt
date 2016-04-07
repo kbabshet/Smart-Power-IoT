@@ -1,0 +1,11 @@
+In terms of testing the front end, one of the ways to test it is to have user driven tests.
+There are not many ways to autonomously test front end development besides for creating
+a virtual client to run certain predefined tests. Therefore another robust method is to 
+manually test various aspects of the front-end.
+
+1/ load localhost:8000/ to see if it goes to the homepage
+2/ test "home system" link to see if it goes to homepage
+3/ test switches are working
+4/ test link to devices directs to device list details page
+5/ check that clicking on a single device takes client to detail page of the single device
+6/ ensure clicking on login takes you to login page
