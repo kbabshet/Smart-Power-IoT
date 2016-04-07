@@ -7,11 +7,7 @@ from django.template import RequestContext, loader
 from .models import Device
 from .models import DeviceState
 
-<<<<<<< Updated upstream
-
 # reads in device database and inserts the information in homepage when called
-=======
->>>>>>> Stashed changes
 def home_page(request):
     device_list = Device.objects.order_by('device_name')[:10]
     return render(request, "index.html", {'devices': device_list})

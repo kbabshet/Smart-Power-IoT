@@ -6,7 +6,7 @@
       <h1>Your smart home power management system</h1>
       <hr>
       <p>The optimum way to manage your home power usage</p>
-      <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+      <a href="#devices" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
     </div>
   </div>
 </header>
@@ -17,18 +17,20 @@
 <hr class="light">
 <a href="{% url 'devices:list' %}"><h4 align="left"> All Device Information </h4></a>
 
-{% for device in devices.all %}
-<a href="{% url 'devices:detail' device.id %}"><h3 align="left"> {{ device.device_name }} </h3> </a>
-<div class="onoffswitch">
-  <form>
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{ device.id }}" value="{{ device.device_name }}" {% if device.current_state.state == "on" %}checked{% endif %}>
-    <label class="onoffswitch-label" for="{{ device.id }}">
-      <span class="onoffswitch-inner" onclick=""></span>
-      <span class="onoffswitch-switch"></span>
-    </label>
-  </form>
-</div>
-{% endfor %}
+<div id="devices">
+  {% for device in devices.all %}
+  <a href="{% url 'devices:detail' device.id %}"><h3 align="left"> {{ device.device_name }} </h3> </a>
+  <div class="onoffswitch">
+    <form>
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{ device.id }}" value="{{ device.device_name }}" {% if device.current_state.state == "on" %}checked{% endif %}>
+      <label class="onoffswitch-label" for="{{ device.id }}">
+        <span class="onoffswitch-inner" onclick=""></span>
+        <span class="onoffswitch-switch"></span>
+      </label>
+    </form>
+  </div>
+  {% endfor %}
+</div->
 <script type="text/javascript">
   // Automatically sends a POST to the server when the checkbox is clicked
   var $ = jQuery;
