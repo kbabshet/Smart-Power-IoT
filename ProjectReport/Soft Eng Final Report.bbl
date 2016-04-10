@@ -21,22 +21,35 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{stakeholders}
+\BIBentryALTinterwordspacing
+BusinessDictionary, ``stakeholder,'' 2016. [Online]. Available:
+  \url{http://www.businessdictionary.com/definition/stakeholder.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{CSS}
 \BIBentryALTinterwordspacing
-w3schools, ``Css tutorial,'' May 2016. [Online]. Available:
+w3schools, ``Css tutorial,'' 2016. [Online]. Available:
   \url{www.w3schools.com/css/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{HTML}
 \BIBentryALTinterwordspacing
-------, ``Html tutorial,'' May 2016. [Online]. Available:
+------, ``Html tutorial,'' 2016. [Online]. Available:
   \url{www.w3schools.com/html/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Javascript}
 \BIBentryALTinterwordspacing
-------, ``Javascript tutorial,'' May 2016. [Online]. Available:
+------, ``Javascript tutorial,'' 2016. [Online]. Available:
   \url{www.w3schools.com/jsl/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{sprintbacklogdef}
+\BIBentryALTinterwordspacing
+L.~Felix, ``9 tips for creating a good sprint backlog,'' 2016. [Online].
+  Available:
+  \url{https://www.scrumalliance.org/community/articles/2009/march/9-tips-for-creating-a-good-sprint-backlog}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

@@ -9,6 +9,7 @@
 \usepackage{circuitikz}
 \usepackage{multirow}
 \usepackage{tabto}
+\usepackage{pdfpages}
 \usepackage[bottom]{footmisc}
 \usetikzlibrary{shapes.geometric, arrows}
 
@@ -27,7 +28,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-	
+	\includepdf{ProjCoverPage}
 	
 	\title{First Prototype Design and Execution of a Smart Home Power Management System\\ 2016/04/11}
 	
@@ -36,7 +37,7 @@
 		Witwatersrand, Johannesburg}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%
-	\abstract{This paper details the design and implementation of the first prototype of a smart home power management system. The final project submission is composed of an application which can add a household device, and control its state, as well as a compilation of all the documentation written in the process of designing this application. A critical analysis of the issues experienced during the design, implementation, and testing, has been provided. All constraints and specifications are successfully met, and additional improvements (as stated herein) can still be made in the future.}
+	\abstract{This paper details the design and implementation of the first prototype of a smart home power management system. The final project submission is composed of an application which can add a household device, and control its state, as well as a compilation of all the documentation written in the process of designing this application. Details of the experiences during the design, implementation, and testing, have been provided. All constraints and specifications are successfully met, and additional improvements can still be made in the future.}
 	
 	\keywords{Design, Smart Home, Power Management, Internet of Things}
 	
@@ -51,16 +52,38 @@
 	A smart home power management system allows users to control and supervise various electrical devices within the household in order to manage the overall power consumption. The system also automatically manages various devices without human interaction depending on the settings enabled in advance by the system user.
 	This interaction and status display is done via a webpage accessible to all predefined household users. 
 	
+	\subsection{Problem Statement}
+	With the rapidly growing interest in new Internet of Things (IoT) technologies, networks consisting of these devices will become increasingly difficult to manage and control. Additionally, power consumption and monitoring will become a greater concern, especially in emerging markets such as South Africa.\\
+	Given this knowledge, surveys were conducted in order to define the specifications and the requirements of the Smart Home Power Management System. 
+	
+	The survey is structured in such a way that it enables users to provide useful information required by the software engineers. The information provided allows the software engineers to define the problem, sketch outlines for the best solution, and determine the constraints as well as resources needed for the system design.
+	
+	In obtaining information from the potential users, the software engineers are able to get a precise overview of the requirements that the users are expecting from the system, as well as an insight of the system from the user's perspective. 
+	\newpage
+	The figures in Appendix A illustrate the results obtained from the survey.
+	
+	\subsection{Project Objectives}
+	
 	The aim of this project is to design the complete aforementioned system and implement some aspect of the system which is defined as the first prototype. The prototype implemented is made up of a scrollable webpage, with a page header and tabs, the addition and removal of a device, with corresponding specifications, viewing the devices connected, and toggling between the states of devices. 
 	
-	Section 2 details the software requirement specification, and is followed by section 3 which contains an extensive design document split into the relevant front and back end sections. Section 4 introduces the sprint planning and illustrates the work breakdown over the time designated for this project, while section 5 provides a sprint retrospective. Section 6...
+	\subsection{Stakeholders}
+	
+	Stakeholders are defined as the people, groups, or organisations that have interest, concern, or influence in an organisational project \cite{stakeholders}. Figure~\ref{fig:stakeholders} below illustrates the project stakeholders that will directly interact with the system as well as those external to it. 
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.75\linewidth]{stakeholders}
+		\caption{Project stakeholder onion diagram}
+		\label{fig:stakeholders}
+	\end{figure}
+
+	\subsection{Report Breakdown}
+	Section 2 details the software requirement specification, and is followed by section 3 which contains an extensive design document split into the relevant front and back end sections. Section 4 details the initial prototype implementation. Section 5 introduces the sprint planning and illustrates the work breakdown over the time designated for this project, while section 6 provides the sprint retrospective corresponding to section 5. 
 	\section{SOFTWARE REQUIREMENT SPECIFICATION}
 	
 	\subsection{Purpose}
 	This section details the system requirements specification (SRS) for the Smart Home Power Management System. The system design documentation will be developed from this information.\\
-	\newline 
-	With the rapidly growing interest in new Internet of Things (IoT) technologies, networks consisting of these devices will become increasingly difficult to manage and control. Additionally, power consumption and monitoring will become a greater concern, especially in emerging markets such as South Africa.\\
-	\newline 
+	
 	This project aims to provide a flexible software system which is able to remotely control and monitor IoT devices, as well as perform detailed power consumption diagnostics.
 	
 	\subsection{Project Scope}
@@ -208,16 +231,17 @@
 	Figure \ref{Trigger_Tab} is a simple illustration of the interface between the user the light detection triggers on the system. The layout of the tab is further divided to clearly illustrate the sub-systems which the user has access to. As seen from the figure, the switches on the triggers tab are designed in a graphical format that is simple for users to use.  
 	
 	Figure \ref{Settings} is the settings page, in which it designed for the user to navigate through each sub-system. The \textit{Add/Remove Device} feature is an important feature, as it is expected that the client may have to add or remove devices for future use. The settings page is set up similarly to the home page on the trigger tab, as user's  familiarity to the website is of importance.
-	
+	%\vspace{-4.5cm}
 	\begin{itemize}
 		\item Home Page Dashboard
-		\begin{figure}[!h]
+		%\vspace{-10cm}
+		\begin{figure}[H]
 			\centering
 			\includegraphics[width=\linewidth]{Home_Page.png}
 			\caption{Figure illustrating the home page the user will see once they have logged on to access the system.}
 			\label{Home_Dashboard}
 		\end{figure}
-		\pagebreak
+		
 		\item Trigger Tab on Dashboard
 		\begin{figure}[!h]
 			\centering
@@ -225,6 +249,7 @@
 			\caption{Figure illustrating the triggers tab, to allow users to control switching of sensors in their home through the system.}
 			\label{Trigger_Tab}
 		\end{figure}
+		\newpage
 		\item Settings Page
 		\begin{figure}[!h]
 			\centering
@@ -291,6 +316,7 @@
 	The implementation of the front-end is for a smart home power management system which monitors the usage and power consumption. It therefore allows user the ability to alter power usage as well as configure alerts and manage the settings of the front-end. The front-end also allows the user to initiate remote triggering of connected devices such as lights and kitchen appliances. It is also designed to display the outcomes of triggering motion detectors and temperature sensors.
 	
 	\subsubsection{Definitions, Acronyms and Abbreviations}
+	
 	\begin{itemize}
 		\item \textbf{CSS} - Cascading Style Sheets which is a stylesheet language that sets up the appearance of the HTML \cite{CSS}.
 		\item \textbf{HTML} - Hypertext Markup Language which is used to generate web pages and its objects form the basis of all websites \cite{HTML}.
@@ -298,9 +324,10 @@
 		\item \textbf{Bootstrap} - provides a html and css template for web development
 		\item \textbf{Javascript} - A high level and dynamic programming language that is used with HTML and the web \cite{Javascript}.
 	\end{itemize}
-	
+	\newpage
 	\subsection{Use Cases}
 	The use cases for the front-end are as given in the tables below. 
+	
 	\begin{table}[H]
 		\centering
 		\caption{Table illustrating the details of the use case for trigger switches}
@@ -327,7 +354,7 @@
 			\hline
 		\end{tabular}
 	\end{table}
-	%\pagebreak
+	\newpage
 	\begin{table}[H]
 		\centering
 		\caption{Table illustrating the details of the use case for the addition and removal of household devices}
@@ -451,7 +478,7 @@
 		\end{tabular}
 	\end{table}
 	%\pagebreak
-	
+	\newpage
 	\subsection{Design Overview}
 	The Design Overview is a section in which it illustrates the architecture of the front-end implementation in the system. It further places it into context with external systems in which is enables the reader of this document to understand the overall details of the front-end design.
 	
@@ -473,11 +500,56 @@
 		\item \textit{Communication Interfaces}: The communication between the management system back-end and the front-end is performed using JavaScript. The connection enables the user to interact with the database by updating it with specific actions.
 	\end{enumerate}
 	
-	\subsubsection{Constraints and Assumptions}
-	\textbf{Constraints: }The main constraint that is experienced in terms of design is time which is a significant limiting factor. The user must be able to access the interface through a web browser which requires internet connectivity.
-	\\
-	\textbf{List of Assumptions: }It is assumed that the interface is designed for users that have previous knowledge and experience in navigating through a web page platform. The experience in which the user has consists of knowing how to create an account as well as logging into the account for future use. Individual assumptions regarding each use case has been discussed previously. \\
-	\textbf{List of Dependencies: }The front-end of the system is dependant on a single database management system in the back-end. Without the information that can be pulled from the database, the front-end becomes essentially useless.
+	\subsubsection{Constraints:}
+	The main constraint that is experienced in terms of front-end design is time which is a significant limiting factor. The user must be able to access the interface through a web browser which requires internet connectivity.
+	\subsubsection{Assumptions:}
+	It is assumed that the interface is designed for users that have previous knowledge and experience in navigating through a webpage platform. The experience in which the user has, consists of knowing how to create an account as well as logging into the account for future use. Individual assumptions regarding each use case has been discussed previously. \\
+	\subsubsection{Dependencies:}
+	The front-end of the system is dependant on a single database management system in the back-end. Without the information that can be pulled from the database, the front-end becomes essentially useless.
+	
+	\subsection{Front-End Relevant Modules}
+	The following describes the relevant modules for the front-end implementation. The modules consists of switch-buttons, a list of all device details, individual device details, and administration. The following modules are implemented using CSS, HTML, JavaScript and the Django framework. 
+	
+	\subsubsection{HTML Module:}
+	The HTML module constructs the basic layout of how the information is displayed to the user in the front end. Although the HTML module is crucial in layout of the web-page, it is assisted by the CSS module. The HTML presents the information obtained from the database in a specific manner that can be easily understood by the user.
+	
+	\subsubsection{CSS Module:}
+	The CSS Module is an extension of the HTML module, in which it assists the HTML layout by arranging the information in an orderly manner that is appealing and can be easily navigable by the user. The CSS does not convey any information to the user, but it does highlight the importance of specific information that is presented by the HTML module.
+	
+	\subsubsection{JavaScript Module:}
+	JavaScript is a high level and dynamic programming language. The JavaScript module is also an extension of the HTML module, in which it enables the user to update the database dynamically when the user performs specific actions in the front-end.
+	
+	\subsubsection{Web-Page Layout:}
+	The web-page layout is implemented using the Twitter Bootstrap Creative Theme, in which the HTML and CSS modules are the base modules that dictate the presentation of the web-page. The theme is to ensure that the web-page is user friendly as well as appealing. The layout is simple, in which the home-page illustrates all the devices that are connected to the Smart Home Power System along with the toggle switches for each connected device.
+	
+	\subsubsection{Device Switch-Button:}
+	The purpose of implementing the switch-button is to allow users to control the linked devices through the platform. The switch-button has two states namely, \textit{on} or \textit{off}. It can only be one or the other and cannot be both. The implementation of the button will only show one state at a time, to eliminate any confusion to the user. In doing so, this allows the implementation to be user friendly. The on and off switch-button can be seen in Figures \ref{on_switch_button} and  \ref{off_switch_button}, respectively.
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.35]{switch_button.png}
+		\caption{Figure illustrating the switch-button for 'on' state}
+		\label{on_switch_button}
+	\end{figure}
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.35]{switch_button_off.png}
+		\caption{Figure illustrating the switch-button for 'off' state}
+		\label{off_switch_button}
+	\end{figure}
+	
+	\subsubsection{Device Details and Diagnostics:}
+	The details and the diagnostics of each connected device is illustrated on the details page, in which it informs the user of the power consumption of each device, as well as giving an overview of the operational times of the device. The purpose of the details and the diagnostics is to inform the user about the accumulated data measured in the system. This is achieved using a graphical format which contains easily understood information. 
+	
+	\subsubsection{Settings:}
+	The settings page is implemented in such a way that it allows the user to easily navigate to the desired device. The settings page contains various settings that allows the user to adjust and modify the chosen device to their desired operational adjustments. These settings consists of adjusting the automated devices with a time schedule, modifying the intensity of specific devices, and allowing the user to trigger the devices. 
+	
+	\subsubsection{Administration:}
+	The simplicity of the administration page is crucial as it is required to be easily understood by the user. The page allows the user to add and remove devices from the smart home power management system. To ensure that the page is easily understood, the conventional \textit{add} and \textit{remove} graphical figures are used. The instructions are clearly stated to prevent any confusion to the user. Aside from allowing the user to add and remove devices, the administration page has the functionality of adding and removing users to the system. The users known to the system are granted access to remotely use it to control the connected devices.
+	
+	\subsubsection{Login:}
+	The login page is designed to be simplistic, in which it only contains two input boxes for a username and password. The \textit{Login} button is centred and explicit, in which it allows the user to easily fill in their details and login into the system. The login page is straight forward and conforms to the general format of other web-pages that requires authentication.
 	
 	\subsection{Non-functional Requirements}
 	\subsubsection{Performance}
@@ -491,7 +563,7 @@
 	\subsubsection{Design Constraints}
 	The front-end should be built while taking full advantage of open source libraries and supporting software to avoid the need for licensing and additional costs.
 
-	
+	\newpage
 	\begin{center}
 		\textbf{II. BACK-END}
 	\end{center}
@@ -509,44 +581,52 @@
 		\label{fig:Sys_Overview}
 	\end{figure}
 	
+	
 	\subsubsection{Constraints:}
-	\begin{itemize}
-		\item The user interface must be accessible through a web browser
-		\item All devices in the system require wireless connectivity
-	\end{itemize}
-	
+	The main constraint that is also experienced in terms of back-end design is time which is a significant limiting factor. Additionally, the network bandwidth may be constrained due to large amounts of data generated by many devices. 
+	A device which meets the system requirements set out in the Software Requirements Specifications. 
 	\subsubsection{Assumptions:}
-	\begin{itemize}
-		\item All of the IoT devices will be connected to the same LAN
-		\item Only a small number of simultaneous users and devices will be connected at once
-	\end{itemize}
+	It is assumed that all the connected devices will be on the same network and that they will implement the MQTT protocol. It is also assumed that a database will have to be significantly large due to all the data that these devices are generating. 
+	\subsubsection{Dependencies:}
+	The back-end of the system is dependant on the RAM, harddrive, as well as CPU of the smart home pa as well as on the supply of electricity to the household. 
+
 	
-	\subsection{Object Descriptions}
+	\subsection{Back-End Relevant Modules}
 	\begin{itemize}
-		\item \textbf{Django Application:} This section is the main application responsible for serving the front end and controlling the database interactions. It uses the Django framework in order to implement this functionality 
+		\item \textbf{Django Application:} This section is the main application responsible for serving the front end and controlling the database interactions. It uses the Django framework in order to implement this functionality. Django uses Python classes to define models in an Object-Relational Mapping, corresponding to tables in a database. These models will be described in detail in the following section. By defining these models in Python code, Django automatically provides an administration interface and abstracts away low-level database operations.
 		\item \textbf{Database Models:} 
+		For more details regarding the database models and relationships, see Figure~\ref{fig:databaseModels}.
 		\begin{itemize}
 			\item \textit{Device Model:} This model represents a singe device. It keeps track of relevant device information, including name, IP address, location, and state. It is the core model of the database system. Two devices cannot have the same name and location attributes. Additionally, no two devices can have the same IP address. 
 			\item \textit{Device Location:} This model represents the location in the household where a device can be found. A location can store many devices, but a device can only be in one location. 
 			\item \textit{Device State:} This model represents the various power states that a device can be in. It is initially populated with the values "on" and "off," however the user still has the ability to add more depending on device capability. 
 			\item \textit{Triggers:} This model represents the various triggers that the system can incorporate, namely, motion, temperature, and light. 
 			It stores an input device ID, an output device ID, and a string of Python code which will provide the conditions for the trigger to fire as well as the action to apply.
-			\item \textit{Actions:}  This model represents the various actions that can be taken by the system when a trigger is fired. 
-			\item \textit{Power Usage:} This model represents the  cumulated power usage of the household devices. It accepts the time frame provided by the user in the front end and returns the total power consumption corresponding to that time specification.  
+			\item \textit{Actions:}  This model represents the various actions that can be taken by the system when a trigger is fired. Any number of Triggers can invoke the same Action.
+			\item \textit{Power Usage:} This model represents the power usage of the household devices at points in time. It stores power usage data for certain time intervals for each device, allowing time-series analysis of device power usage.
 		\end{itemize}
 		\item \textbf{Celery:} 
 		This is an asynchronous task queuing framework that supports scheduling and real-time operation. The Django application uses Celery in order to manage long running tasks such as trigger monitoring as well as controlling and monitoring devices. Using the default RabbitMQ message broker, and the MQTT messaging protocol, Celery communicates with Internet of Things devices over the network. 
 		\begin{itemize}
-			\item \textit{Celery Worker 1:} This worker will handle tasks requested by the user, such as changing the device state, or polling a device for power usage data. 
-			\item \textit{Celery Worker 2:} This worker will periodically execute the trigger processing task by fetching all the triggers from the database and executing those actions which correspond to the trigger that was flagged. 
+			\item \textit{Celery Worker 1:} This worker will handle tasks requested by the user, such as changing the device state, or polling a device for power usage data. These tasks are typically executed and completed quickly.
+			\item \textit{Celery Worker 2:} This worker will periodically execute the trigger processing task by fetching all the triggers from the database and executing those actions which correspond to the trigger that was flagged. This task may run for an extended period of time, hence the need for the second worker.
 		\end{itemize}
 	\end{itemize}
 	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{ER}
+		\caption{The entity relationship diagram showing the relationships between database models as well as the primary and foreign keys for each model}
+		\label{fig:databaseModels}
+	\end{figure}
+		
 	\subsection{Non-Functional Requirements}
 	\subsubsection{Performance Requirements:}
 	The smart home power system is an application and system that is designed for efficiency. This means that the application as well as the connecting household components need to respond quickly and in real time. 
 	\\\\
 	The application will most likely undergo several updates and changes for the user's benefit. The system is required to update on user command. Updates will include further improvements to the application as well as fixes for issues that arise in operation.
+	\\\\
+	The lightweight MQTT protocol is chosen to minimise network traffic and processing requirements so that more devices can be added without performance degradation. 
 	
 	\subsubsection{Safety Requirements:} 
 	The application as well as the system components need to take certain safety concerns into account. 
@@ -559,18 +639,72 @@
 	The system needs to ensure that only the user has access to the application to prevent external parties gaining control of the connected components within a house. This can be done with a signup, login and authentication process. 
 	The components within the house that the application connects with, need to be protected from external parties and therefore they must be explicitly authenticated. 
 	
-	\subsubsection{Software Quality Attributes:}
-	The application is web based and needs to be user friendly. The functioning of the application needs to be simple so that no additional documentation or prior knowledge or experience is required. 
 	
 	\subsection{Supplementary Documentation}
 	\subsubsection{Tools used to create diagrams:}
 	\begin{itemize}
-		\item UML diagrams: ArgoUML, http://argouml.tigris.org
+		\item System overview diagrams: Microsoft PowerPoint
+		\item UML diagram: ArgoUML\\http://argouml.tigris.org
+		\item Burndown chart: Burndown for TRELLO\\https://www.burndownfortrello.com
 	\end{itemize}
+	
+	\section{PROTOTYPE IMPLEMENTATION}
+	
+	This section documents the implementation of the first prototype of the Smart Home Power Management System. 	
+	
+	\subsection{Key Modules Selected for Project Illustration:}
+	A few class modules have been written using Django, a high-level Python Web framework, in conjunction with a Bootstrap Theme, a powerful front-end framework, for the first prototype: 
+	\begin{enumerate}
+		\item Scrollable web-pages, with a page header and overall device information.
+		\item The addition and removal of device/s, along with corresponding specifications.
+		\item The adding and removing of user account/s in the system.
+		%\item Setting parameters which do not allow certain device characteristics when adding a device
+		\item Viewing the connected devices along with its details.
+		\item Toggling between the individual device's state.
+		\item Enable the user to log in into their user account.
+	\end{enumerate}
+	
+	\subsection{Testing:}
+	Simple tests have been written and conducted along the development process of this prototype: 
+	
+	\subsubsection{Front-end:}
+	There are 2 sets of testing in the front-end: 
+	\begin{enumerate}
+		\item Manual user testing
+		\item Automatic, predefined written/coded tests
+	\end{enumerate}
+	
+	\textbf{Manual User Testing:}
+	Every possible page and button combination have been manually tested. 
+	
+	\textbf{Written tests:}
+	\begin{enumerate}
+		\item Testing that the homepage successfully loads when it is called
+		\item Check that the details page of a specific device loads when it is called
+		\item Test that the device list page loads successfully
+		\item Check that the login page loads successfully
+	\end{enumerate}	
+	
+	\subsubsection{Back-end:}
+	The tests that have been written to demonstrate the functionality of the back-end are: 
+	\begin{enumerate}
+		\item Check that a device can be added to the database
+		\item Test that the system does not allow datatypes which do not fit the device specifications. For example, a user cannot enter a device IP address as "3498347", but instead it must be an IPv4 or IPv6 address. 
+		\item Check that a certain home location cannot contain two devices with the same names. For example, a kitchen cannot contain "kettle 1" and "kettle 1" 
+		\item Test that no two devices can have the same IP address
+	\end{enumerate}
 	
 	\section{SPRINT PLANNING}
 	
-	The product backlog drawn up on 24 March 2016 is as shown below (ordered by priority):
+	%\subsection{Work Schedule}
+	All work for the prototype development was conducted as a well collaborated team. Upon receiving information complying to the deliverables of this lab, a three-hour sprint planning meeting was called in order to conclude the following: 
+	\begin{enumerate}
+		\item The product backlog
+		\item The sprint goals
+		\item The action plan of how to achieve this goal by the target date (4 April 2016)
+	\end{enumerate}
+	
+	As is required, the product backlog was first created in order to decide which of these tasks will be transferred to the sprint backlog for the latest product increment. The product backlog drawn up on 24 March 2016 is as shown below (ordered by priority):
 	
 	\begin{itemize}
 		\item As a user I would like to be able to add/remove a device
@@ -608,15 +742,18 @@
 		\end{itemize}
 	\end{itemize}
 	
-	On this day, with two weeks remaining till project submission, a sprint planning meeting was held in order to discuss and plan the work to be performed in the first sprint which would have a timebox of one week. The screenshot below illustrates the items from the product backlog that were moved to the sprint backlog on this day. 
-	
+	Upon this discussion, with two weeks remaining till project submission, a sprint planning meeting was held in order to discuss and plan the work to be performed in the first sprint which would have a timebox of one week. A sprint backlog was drawn up on Trello (a software collaboration tool). The sprint backlog is a basic list of the tasks that must be implemented by the team in order to deliver a functional product increment at the end of that sprint \cite{sprintbacklogdef}. 
+	\newline
+	\newline
+	The screenshot below illustrates the items from the product backlog that were moved to the sprint backlog on this day. 
+	%\vspace{-15mm}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=\linewidth]{sprint_backlog_1}
 		\caption{Screenshot of the Trello page drawn on the first day of the first sprint for the initial prototype implementation}
 		\label{fig:sprint_backlog_1}
 	\end{figure}
-	
+	\newpage
 	After the first week, a second sprint planning was held for the following week-long sprint. The screenshot below illustrates the new items that were now moved to the next sprint backlog. 
 	
 	\begin{figure}[H]
@@ -626,18 +763,43 @@
 		\label{fig:sprint_backlog_2}
 	\end{figure}
 	
-	\section{DESCRIPTION OF RELEVANT MODULES}
-	Refer to the "Object Descriptions" (Section 3.4) within the Design Document for a presentation of the relevant modules implemented in the smart home power management system. 
+	Tasks were delegated and the product was worked on and shared amongst the team using GIT, while sprint retrospective meetings were held once every week on Thursdays.
+	\newline
+	\newline	
+	As was decided at the commencement of this project, Alice Yang and Daniel Weinberg have been assigned to the front-end development, whereas Ari Croock and Kanaka Babshet have been assigned to the back-end development. 
+	
+	
+	
+	%\section{DESCRIPTION OF RELEVANT MODULES}
+	%Refer to the "Object Descriptions" (Section 3.4) within the Design Document for a presentation of the relevant modules implemented in the smart home power management system. 
 	\section{SPRINT RETROSPECTIVE}
+	
+	The burndown charts for Sprint 1 and 2 are shown in Figure~\ref{fig:Burndown1} and Figure~\ref{fig:Burndown2} . As can be seen, the actual time spent on the planned tasks exceeded the estimated time overall. This can be attributed to a number of reasons, namely time constraints and inexperience with the chosen software frameworks. Over time the scrum master and software engineers will become better at estimating time required for tasks, and will gain experience with relevant frameworks, making routine tasks quicker and easier to perform.
+	
+	The team should continue having productive and efficient sprint planning and sprint retrospective meetings at the beginning and end of each sprint. 
+	
+	Due to time constraints and other projects being worked on simultaneously, daily scrum meetings could not be held (meetings were help roughly every two days). Preferably these meetings should take place daily in order to encourage communication and help reduce the time spent on solving technical issues. 
+	The scrum master should also encourage continuous feedback during the sprint as ideas may be forgotten by the time the retrospective meeting occurs.
+	
+	\begin{figure} [H]
+		\centering
+		\includegraphics[width=\linewidth]{Burndown1}
+		\caption{Burndown chart for Sprint 1: 24 March 2016 - 31 March 2016}
+		\label{fig:Burndown1}
+	\end{figure}
+	
+	\begin{figure} [H]
+		\centering
+		\includegraphics[width=\linewidth]{Burndown2}
+		\caption{Burndown chart for Sprint 2: 31 March 2016 - 4 April 2016}
+		\label{fig:Burndown2}
+	\end{figure}
+
 
 	%\newpage
 	%\bibliographystyle{witseie}
 	%\begin{thebibliography}{9}		
 	%\end{thebibliography}
-	
-	%\newpage
-	%\onecolumn
-	%\section*{Appendix A}
 	
 	\newpage
 	\pagebreak
@@ -646,6 +808,50 @@
 	
 	%{\tiny \vfill \hfill \today \hspace{5mm} witseie-paper-2003.\TeX}
 	
+	\newpage
+	\onecolumn
+	\section*{Appendix A}
+	A survey was conducted prior to implementation and design of the smart home power management system. The figures below illustrates the results corresponding to every question.
+	
+	\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{survey1}
+\caption{Pie chart illustrating the results for Question 1 of the smart home power management survey}
+\label{fig:survey1}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{survey2}
+\caption{Pie chart illustrating the results for Question 2 of the smart home power management survey}
+\label{fig:survey2}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{survey3}
+	\caption{Pie chart illustrating the results for Question 3 of the smart home power management survey}
+	\label{fig:survey3}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{survey4}
+	\caption{Pie chart illustrating the results for Question 4 of the smart home power management survey}
+	\label{fig:survey4}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{survey5}
+	\caption{Bar graph illustrating the results for Question 5 of the smart home power management survey}
+	\label{fig:survey5}
+\end{figure}
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{survey6}
+	\caption{Bar graph illustrating the results for Question 6 of the smart home power management survey}
+	\label{fig:survey6}
+\end{figure}	
+
+
 \end{document}
 
 " vim: ts=4

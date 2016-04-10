@@ -1,58 +1,78 @@
 \BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
-\BOOKMARK [1][-]{section.2}{SOFTWARE REQUIREMENT SPECIFICATION}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Purpose}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Project Scope}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Project Overview}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Assumptions:}{subsection.2.3}% 6
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Constraints:}{subsection.2.3}% 7
-\BOOKMARK [3][-]{subsubsection.2.3.3}{User Classes and Characteristics:}{subsection.2.3}% 8
-\BOOKMARK [3][-]{subsubsection.2.3.4}{Operating Environment:}{subsection.2.3}% 9
-\BOOKMARK [3][-]{subsubsection.2.3.5}{Software Development Life-cycle:}{subsection.2.3}% 10
-\BOOKMARK [2][-]{subsection.2.4}{System Features}{section.2}% 11
-\BOOKMARK [3][-]{subsubsection.2.4.1}{System Feature 1 - Remote On/Off Switching: }{subsection.2.4}% 12
-\BOOKMARK [3][-]{subsubsection.2.4.2}{System Feature 2 - User Configurable Triggers:}{subsection.2.4}% 13
-\BOOKMARK [3][-]{subsubsection.2.4.3}{System Feature 3 - Power Consumption Monitoring:}{subsection.2.4}% 14
-\BOOKMARK [3][-]{subsubsection.2.4.4}{System Feature 4 - Energy Source Management:}{subsection.2.4}% 15
-\BOOKMARK [3][-]{subsubsection.2.4.5}{System Feature 6 - User Configurable Alerts:}{subsection.2.4}% 16
-\BOOKMARK [3][-]{subsubsection.2.4.6}{System Feature 7 - User Configurable Webpage Settings}{subsection.2.4}% 17
-\BOOKMARK [2][-]{subsection.2.5}{External Interface Requirements}{section.2}% 18
-\BOOKMARK [3][-]{subsubsection.2.5.1}{User Interface - GUI:}{subsection.2.5}% 19
-\BOOKMARK [3][-]{subsubsection.2.5.2}{Hardware Interface:}{subsection.2.5}% 20
-\BOOKMARK [3][-]{subsubsection.2.5.3}{Communication Interface:}{subsection.2.5}% 21
-\BOOKMARK [2][-]{subsection.2.6}{Other Non-Functional Requirements}{section.2}% 22
-\BOOKMARK [3][-]{subsubsection.2.6.1}{Performance Requirements:}{subsection.2.6}% 23
-\BOOKMARK [3][-]{subsubsection.2.6.2}{Safety Requirements:}{subsection.2.6}% 24
-\BOOKMARK [3][-]{subsubsection.2.6.3}{Security Requirements:}{subsection.2.6}% 25
-\BOOKMARK [3][-]{subsubsection.2.6.4}{Software Quality Attributes:}{subsection.2.6}% 26
-\BOOKMARK [1][-]{section.3}{DESIGN DOCUMENT}{}% 27
-\BOOKMARK [2][-]{subsection.3.1}{Scope}{section.3}% 28
-\BOOKMARK [2][-]{subsection.3.2}{Overview}{section.3}% 29
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Purpose}{subsection.3.2}% 30
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Scope}{subsection.3.2}% 31
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Definitions, Acronyms and Abbreviations}{subsection.3.2}% 32
-\BOOKMARK [2][-]{subsection.3.3}{Use Cases}{section.3}% 33
-\BOOKMARK [2][-]{subsection.3.4}{Design Overview}{section.3}% 34
-\BOOKMARK [3][-]{figure.5}{Overall Architecture}{subsection.3.4}% 35
-\BOOKMARK [3][-]{subsubsection.3.4.2}{System Interfaces}{subsection.3.4}% 36
-\BOOKMARK [3][-]{subsubsection.3.4.3}{Constraints and Assumptions}{subsection.3.4}% 37
-\BOOKMARK [2][-]{subsection.3.5}{Non-functional Requirements}{section.3}% 38
-\BOOKMARK [3][-]{subsubsection.3.5.1}{Performance}{subsection.3.5}% 39
-\BOOKMARK [3][-]{subsubsection.3.5.2}{Safety}{subsection.3.5}% 40
-\BOOKMARK [3][-]{subsubsection.3.5.3}{Security}{subsection.3.5}% 41
-\BOOKMARK [3][-]{subsubsection.3.5.4}{Software Quality Attributes}{subsection.3.5}% 42
-\BOOKMARK [3][-]{subsubsection.3.5.5}{Design Constraints}{subsection.3.5}% 43
-\BOOKMARK [2][-]{subsection.3.6}{Design Overview}{section.3}% 44
-\BOOKMARK [3][-]{subsubsection.3.6.1}{System Architecture:}{subsection.3.6}% 45
-\BOOKMARK [3][-]{subsubsection.3.6.2}{Constraints:}{subsection.3.6}% 46
-\BOOKMARK [3][-]{subsubsection.3.6.3}{Assumptions:}{subsection.3.6}% 47
-\BOOKMARK [2][-]{subsection.3.7}{Object Descriptions}{section.3}% 48
-\BOOKMARK [2][-]{subsection.3.8}{Non-Functional Requirements}{section.3}% 49
-\BOOKMARK [3][-]{subsubsection.3.8.1}{Performance Requirements:}{subsection.3.8}% 50
-\BOOKMARK [3][-]{subsubsection.3.8.2}{Safety Requirements:}{subsection.3.8}% 51
-\BOOKMARK [3][-]{subsubsection.3.8.3}{Security Requirements:}{subsection.3.8}% 52
-\BOOKMARK [3][-]{subsubsection.3.8.4}{Software Quality Attributes:}{subsection.3.8}% 53
-\BOOKMARK [2][-]{subsection.3.9}{Supplementary Documentation}{section.3}% 54
-\BOOKMARK [3][-]{subsubsection.3.9.1}{Tools used to create diagrams:}{subsection.3.9}% 55
-\BOOKMARK [1][-]{section.4}{SPRINT PLANNING}{}% 56
-\BOOKMARK [1][-]{section.5}{DESCRIPTION OF RELEVANT MODULES}{}% 57
-\BOOKMARK [1][-]{section.6}{SPRINT RETROSPECTIVE}{}% 58
+\BOOKMARK [2][-]{subsection.1.1}{Problem Statement}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Project Objectives}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Stakeholders}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Report Breakdown}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{SOFTWARE REQUIREMENT SPECIFICATION}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Purpose}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{Project Scope}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.3}{Project Overview}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Assumptions:}{subsection.2.3}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Constraints:}{subsection.2.3}% 11
+\BOOKMARK [3][-]{subsubsection.2.3.3}{User Classes and Characteristics:}{subsection.2.3}% 12
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Operating Environment:}{subsection.2.3}% 13
+\BOOKMARK [3][-]{subsubsection.2.3.5}{Software Development Life-cycle:}{subsection.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.4}{System Features}{section.2}% 15
+\BOOKMARK [3][-]{subsubsection.2.4.1}{System Feature 1 - Remote On/Off Switching: }{subsection.2.4}% 16
+\BOOKMARK [3][-]{subsubsection.2.4.2}{System Feature 2 - User Configurable Triggers:}{subsection.2.4}% 17
+\BOOKMARK [3][-]{subsubsection.2.4.3}{System Feature 3 - Power Consumption Monitoring:}{subsection.2.4}% 18
+\BOOKMARK [3][-]{subsubsection.2.4.4}{System Feature 4 - Energy Source Management:}{subsection.2.4}% 19
+\BOOKMARK [3][-]{subsubsection.2.4.5}{System Feature 6 - User Configurable Alerts:}{subsection.2.4}% 20
+\BOOKMARK [3][-]{subsubsection.2.4.6}{System Feature 7 - User Configurable Webpage Settings}{subsection.2.4}% 21
+\BOOKMARK [2][-]{subsection.2.5}{External Interface Requirements}{section.2}% 22
+\BOOKMARK [3][-]{subsubsection.2.5.1}{User Interface - GUI:}{subsection.2.5}% 23
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Hardware Interface:}{subsection.2.5}% 24
+\BOOKMARK [3][-]{subsubsection.2.5.3}{Communication Interface:}{subsection.2.5}% 25
+\BOOKMARK [2][-]{subsection.2.6}{Other Non-Functional Requirements}{section.2}% 26
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Performance Requirements:}{subsection.2.6}% 27
+\BOOKMARK [3][-]{subsubsection.2.6.2}{Safety Requirements:}{subsection.2.6}% 28
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Security Requirements:}{subsection.2.6}% 29
+\BOOKMARK [3][-]{subsubsection.2.6.4}{Software Quality Attributes:}{subsection.2.6}% 30
+\BOOKMARK [1][-]{section.3}{DESIGN DOCUMENT}{}% 31
+\BOOKMARK [2][-]{subsection.3.1}{Scope}{section.3}% 32
+\BOOKMARK [2][-]{subsection.3.2}{Overview}{section.3}% 33
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Purpose}{subsection.3.2}% 34
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Scope}{subsection.3.2}% 35
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Definitions, Acronyms and Abbreviations}{subsection.3.2}% 36
+\BOOKMARK [2][-]{subsection.3.3}{Use Cases}{section.3}% 37
+\BOOKMARK [2][-]{subsection.3.4}{Design Overview}{section.3}% 38
+\BOOKMARK [3][-]{figure.6}{Overall Architecture}{subsection.3.4}% 39
+\BOOKMARK [3][-]{subsubsection.3.4.2}{System Interfaces}{subsection.3.4}% 40
+\BOOKMARK [3][-]{subsubsection.3.4.3}{Constraints:}{subsection.3.4}% 41
+\BOOKMARK [3][-]{subsubsection.3.4.4}{Assumptions:}{subsection.3.4}% 42
+\BOOKMARK [3][-]{subsubsection.3.4.5}{Dependencies:}{subsection.3.4}% 43
+\BOOKMARK [2][-]{subsection.3.5}{Front-End Relevant Modules}{section.3}% 44
+\BOOKMARK [3][-]{subsubsection.3.5.1}{HTML Module:}{subsection.3.5}% 45
+\BOOKMARK [3][-]{subsubsection.3.5.2}{CSS Module:}{subsection.3.5}% 46
+\BOOKMARK [3][-]{subsubsection.3.5.3}{JavaScript Module:}{subsection.3.5}% 47
+\BOOKMARK [3][-]{subsubsection.3.5.4}{Web-Page Layout:}{subsection.3.5}% 48
+\BOOKMARK [3][-]{subsubsection.3.5.5}{Device Switch-Button:}{subsection.3.5}% 49
+\BOOKMARK [3][-]{subsubsection.3.5.6}{Device Details and Diagnostics:}{subsection.3.5}% 50
+\BOOKMARK [3][-]{subsubsection.3.5.7}{Settings:}{subsection.3.5}% 51
+\BOOKMARK [3][-]{subsubsection.3.5.8}{Administration:}{subsection.3.5}% 52
+\BOOKMARK [3][-]{subsubsection.3.5.9}{Login:}{subsection.3.5}% 53
+\BOOKMARK [2][-]{subsection.3.6}{Non-functional Requirements}{section.3}% 54
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Performance}{subsection.3.6}% 55
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Safety}{subsection.3.6}% 56
+\BOOKMARK [3][-]{subsubsection.3.6.3}{Security}{subsection.3.6}% 57
+\BOOKMARK [3][-]{subsubsection.3.6.4}{Software Quality Attributes}{subsection.3.6}% 58
+\BOOKMARK [3][-]{subsubsection.3.6.5}{Design Constraints}{subsection.3.6}% 59
+\BOOKMARK [2][-]{subsection.3.7}{Design Overview}{section.3}% 60
+\BOOKMARK [3][-]{subsubsection.3.7.1}{System Architecture:}{subsection.3.7}% 61
+\BOOKMARK [3][-]{subsubsection.3.7.2}{Constraints:}{subsection.3.7}% 62
+\BOOKMARK [3][-]{subsubsection.3.7.3}{Assumptions:}{subsection.3.7}% 63
+\BOOKMARK [3][-]{subsubsection.3.7.4}{Dependencies:}{subsection.3.7}% 64
+\BOOKMARK [2][-]{subsection.3.8}{Back-End Relevant Modules}{section.3}% 65
+\BOOKMARK [2][-]{subsection.3.9}{Non-Functional Requirements}{section.3}% 66
+\BOOKMARK [3][-]{subsubsection.3.9.1}{Performance Requirements:}{subsection.3.9}% 67
+\BOOKMARK [3][-]{subsubsection.3.9.2}{Safety Requirements:}{subsection.3.9}% 68
+\BOOKMARK [3][-]{subsubsection.3.9.3}{Security Requirements:}{subsection.3.9}% 69
+\BOOKMARK [2][-]{subsection.3.10}{Supplementary Documentation}{section.3}% 70
+\BOOKMARK [3][-]{subsubsection.3.10.1}{Tools used to create diagrams:}{subsection.3.10}% 71
+\BOOKMARK [1][-]{section.4}{PROTOTYPE IMPLEMENTATION}{}% 72
+\BOOKMARK [2][-]{subsection.4.1}{Key Modules Selected for Project Illustration:}{section.4}% 73
+\BOOKMARK [2][-]{subsection.4.2}{Testing:}{section.4}% 74
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Front-end:}{subsection.4.2}% 75
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Back-end:}{subsection.4.2}% 76
+\BOOKMARK [1][-]{section.5}{SPRINT PLANNING}{}% 77
+\BOOKMARK [1][-]{section.6}{SPRINT RETROSPECTIVE}{}% 78
