@@ -64,7 +64,7 @@
 	
 	\subsection{Project Objectives}
 	
-	The aim of this project is to design the complete aforementioned system and implement some aspect of the system which is defined as the first prototype. The prototype implemented is made up of a scrollable webpage, with a page header and tabs, the addition and removal of a device, with corresponding specifications, viewing the devices connected, and toggling between the states of devices. 
+	The aim of this project is to design the complete aforementioned system and implement some aspect of the system which is defined as the first prototype. The prototype implemented is made up of a scrollable webpage, with a page header, the addition and removal of a device, with corresponding specifications, viewing the devices connected, and toggling between the states of devices. 
 	
 	\subsection{Stakeholders}
 	
@@ -78,7 +78,7 @@
 	\end{figure}
 
 	\subsection{Report Breakdown}
-	Section 2 details the software requirement specification, and is followed by section 3 which contains an extensive design document split into the relevant front and back end sections. Section 4 details the initial prototype implementation. Section 5 introduces the sprint planning and illustrates the work breakdown over the time designated for this project, while section 6 provides the sprint retrospective corresponding to section 5. 
+	Section 2 details the software requirement specification, and is followed by section 3 which contains an extensive design document split into the relevant front- and back-end sections. Section 4 details the initial prototype implementation. Section 5 introduces the sprint planning and illustrates the work breakdown over the time designated for this project, while section 6 provides the sprint retrospective corresponding to section 5. 
 	\section{SOFTWARE REQUIREMENT SPECIFICATION}
 	
 	\subsection{Purpose}
@@ -128,9 +128,9 @@
 	\end{itemize}
 	Assuming that few users and devices will be connected to the system simultaneously (such as in a typical household), the system requirements are fairly relaxed:
 	\begin{itemize}
-		\item any modern Microsoft Windows or GNU/Linux system that supports the technologies used
-		\item a connection to the LAN, such as Ethernet or WiFi
-		\item low-cost hardware such as a Raspberry Pi
+		\item Any modern Microsoft Windows or GNU/Linux system that supports the technologies used
+		\item A connection to the LAN, such as Ethernet or WiFi
+		\item Low-cost hardware such as a Raspberry Pi
 	\end{itemize}
 	However, depending on the system configuration, an external storage solution may be needed for storing a large amount of power usage data.
 	
@@ -307,13 +307,13 @@
 	\end{center}
 	
 	\subsection{Overview}
-	The front-end of the power home management system is an integral component of the system as a whole. Without the presence of the front-end, the back-end becomes essentially irrelevant. The front-end allows the user to interact with the smart home system through a web-page platform. Within the front-end are graphical and functional features that makes the connected devices easily controlled. The front-end consists of a login page, an administration page, a settings page, a device details page, both individual and collective, as well as a dashboard page containing system and device diagnostics.
+	The front-end of the power home management system is an integral component of the system as a whole. Without the presence of the front-end, the back-end becomes essentially irrelevant. The front-end allows the user to interact with the smart home system through a web-page platform. Within the front-end are graphical and functional features that make the connected devices easily controlled. The front-end consists of a login page, an administration page, a settings page, a device details page, both individual and collective, as well as a dashboard page containing system and device diagnostics.
 	
 	\subsubsection{Purpose}
-	The purpose of the front-end is to provide a user friendly graphical user interface which allows the user to interact with the smart home power management system. It provides a means of communication between the front-end and the back-end of the system in order to display the relevant information or changes to the user. In addition it allows the user to control the devices remotely through the platform at any location.
+	The purpose of the front-end is to provide a user friendly graphical user interface which allows the user to interact with the smart home power management system. It provides a means of communication between the front-end and the back-end of the system in order to display the relevant information or changes to the user. In addition it allows the user to control the devices remotely through the platform from any location.
 	
 	\subsubsection{Scope}
-	The implementation of the front-end is for a smart home power management system which monitors the usage and power consumption. It therefore allows user the ability to alter power usage as well as configure alerts and manage the settings of the front-end. The front-end also allows the user to initiate remote triggering of connected devices such as lights and kitchen appliances. It is also designed to display the outcomes of triggering motion detectors and temperature sensors.
+	The implementation of the front-end is for a smart home power management system which monitors device usage and power consumption. It therefore allows the user the ability to alter power usage as well as configure alerts and manage the settings of the front-end. The front-end also allows the user to initiate remote triggering of connected devices such as lights and kitchen appliances. It is also designed to display the outcomes of triggering motion detectors and temperature sensors.
 	
 	\subsubsection{Definitions, Acronyms and Abbreviations}
 	
@@ -379,9 +379,9 @@
 			\hline
 			Assumptions & There is at least one allocated administration user in the household.\\
 			\hline
-			Non-Functional Requirements & The addition and removal of the devices in the system is expected to instant, to prevent any confusion to any of the users.\\
+			Non-Functional Requirements & The addition and removal of the devices in the system is expected to be instant, to prevent any confusion to any of the users.\\
 			\hline
-			Frequency & The frequency usage of the addition and removal feature is low, since the devices will be added during the installation of the systems. If there are any device removals, this will only occur on occasion when the device/s are defective.\\
+			Frequency & The frequency of usage of the addition and removal feature is low, since the devices will be added during the installation of the system. If there are any device removals, this will only occur on occasion when the device/s are defective.\\
 			\hline
 			Priority & This is a high priority feature in the system, as this system is reliant on the ability of the administration user to add and remove devices. Without this feature, the system becomes redundant.\\
 			\hline
@@ -480,10 +480,11 @@
 	%\pagebreak
 	\newpage
 	\subsection{Design Overview}
-	The Design Overview is a section in which it illustrates the architecture of the front-end implementation in the system. It further places it into context with external systems in which is enables the reader of this document to understand the overall details of the front-end design.
+	The Design Overview illustrates the architecture of the front-end implementation of the system. It further places it into the context of external systems, which enables the reader of this document to understand the overall details of the front-end design.
 	
 	\subsubsection{Overall Architecture}
-	\begin{figure}[!htb]
+	The overall architecture of the front-end is shown in Figure~\ref{system_architecture}.
+	\begin{figure}[H]
 		\centering
 		\label{system_architecture}
 		\includegraphics[width=0.9\linewidth]{System_Architecture}
@@ -503,7 +504,7 @@
 	\subsubsection{Constraints:}
 	The main constraint that is experienced in terms of front-end design is time which is a significant limiting factor. The user must be able to access the interface through a web browser which requires internet connectivity.
 	\subsubsection{Assumptions:}
-	It is assumed that the interface is designed for users that have previous knowledge and experience in navigating through a webpage platform. The experience in which the user has, consists of knowing how to create an account as well as logging into the account for future use. Individual assumptions regarding each use case has been discussed previously. \\
+	It is assumed that the interface is designed for users that have previous knowledge and experience in navigating through a webpage platform. The user us expected to know how to create an account as well as log into the account for future use. Individual assumptions regarding each use case have been discussed previously. \\
 	\subsubsection{Dependencies:}
 	The front-end of the system is dependant on a single database management system in the back-end. Without the information that can be pulled from the database, the front-end becomes essentially useless.
 	
@@ -540,16 +541,16 @@
 	\end{figure}
 	
 	\subsubsection{Device Details and Diagnostics:}
-	The details and the diagnostics of each connected device is illustrated on the details page, in which it informs the user of the power consumption of each device, as well as giving an overview of the operational times of the device. The purpose of the details and the diagnostics is to inform the user about the accumulated data measured in the system. This is achieved using a graphical format which contains easily understood information. 
+	The details and the diagnostics of each connected device are illustrated on the details page, in which it informs the user of the power consumption of each device, as well as giving an overview of the operational times of the device. The purpose of the details and the diagnostics is to inform the user about the accumulated data measured in the system. This is achieved using a graphical format which contains easily understood information. 
 	
 	\subsubsection{Settings:}
-	The settings page is implemented in such a way that it allows the user to easily navigate to the desired device. The settings page contains various settings that allows the user to adjust and modify the chosen device to their desired operational adjustments. These settings consists of adjusting the automated devices with a time schedule, modifying the intensity of specific devices, and allowing the user to trigger the devices. 
+	The settings page is implemented in such a way that it allows the user to easily navigate to the desired device. The settings page contains various settings that allows the user to adjust and modify the chosen device to their desired operational adjustments. These settings consist of adjusting the automated devices with a time schedule, modifying the intensity of specific devices, and allowing the user to trigger the devices. 
 	
 	\subsubsection{Administration:}
 	The simplicity of the administration page is crucial as it is required to be easily understood by the user. The page allows the user to add and remove devices from the smart home power management system. To ensure that the page is easily understood, the conventional \textit{add} and \textit{remove} graphical figures are used. The instructions are clearly stated to prevent any confusion to the user. Aside from allowing the user to add and remove devices, the administration page has the functionality of adding and removing users to the system. The users known to the system are granted access to remotely use it to control the connected devices.
 	
 	\subsubsection{Login:}
-	The login page is designed to be simplistic, in which it only contains two input boxes for a username and password. The \textit{Login} button is centred and explicit, in which it allows the user to easily fill in their details and login into the system. The login page is straight forward and conforms to the general format of other web-pages that requires authentication.
+	The login page is designed to be simplistic, in which it only contains two input boxes for a username and password. The \textit{Login} button is centred and explicit, in which it allows the user to easily fill in their details and login into the system. The login page is straight forward and conforms to the general format of other web-pages that require authentication.
 	
 	\subsection{Non-functional Requirements}
 	\subsubsection{Performance}
@@ -571,6 +572,14 @@
 	\subsection{Design Overview}
 	This will give a brief introduction to the smart home power management system back-end design. 
 	
+	\subsection{Definitions}
+	\begin{enumerate}
+		\item \textbf{Django} - A high-level Python web framework designed to be scalable and easy to use
+		\item \textbf{MQTT} - A lightweight publish/subscribe messaging protocol commonly used in embedded devices \cite{mqtt}
+		\item \textbf{RabbitMQ} - A robust message broker framework that supports MQTT \cite{rabbitmq}
+		\item \textbf{Celery} - A distributed task queue for Django that uses RabbitMQ as its default message broker \cite{celery}
+	\end{enumerate}
+	
 	\subsubsection{System Architecture:}
 	The system architecture will give an overall view of the entire back-end system designed. 
 	
@@ -583,12 +592,12 @@
 	
 	
 	\subsubsection{Constraints:}
-	The main constraint that is also experienced in terms of back-end design is time which is a significant limiting factor. Additionally, the network bandwidth may be constrained due to large amounts of data generated by many devices. 
+	The main constraint that is also experienced in terms of back-end design is time, which is a significant limiting factor. Additionally, the network bandwidth may be constrained due to large amounts of data generated by many devices. 
 	A device which meets the system requirements set out in the Software Requirements Specifications. 
 	\subsubsection{Assumptions:}
 	It is assumed that all the connected devices will be on the same network and that they will implement the MQTT protocol. It is also assumed that a database will have to be significantly large due to all the data that these devices are generating. 
 	\subsubsection{Dependencies:}
-	The back-end of the system is dependant on the RAM, harddrive, as well as CPU of the smart home pa as well as on the supply of electricity to the household. 
+	The back-end of the system is dependant on the RAM, harddrive, as well as CPU of the smart home server as well as on the supply of electricity to the household. 
 
 	
 	\subsection{Back-End Relevant Modules}
@@ -597,13 +606,13 @@
 		\item \textbf{Database Models:} 
 		For more details regarding the database models and relationships, see Figure~\ref{fig:databaseModels}.
 		\begin{itemize}
-			\item \textit{Device Model:} This model represents a singe device. It keeps track of relevant device information, including name, IP address, location, and state. It is the core model of the database system. Two devices cannot have the same name and location attributes. Additionally, no two devices can have the same IP address. 
-			\item \textit{Device Location:} This model represents the location in the household where a device can be found. A location can store many devices, but a device can only be in one location. 
-			\item \textit{Device State:} This model represents the various power states that a device can be in. It is initially populated with the values "on" and "off," however the user still has the ability to add more depending on device capability. 
-			\item \textit{Triggers:} This model represents the various triggers that the system can incorporate, namely, motion, temperature, and light. 
+			\item \textit{Device Model:} This model represents a singe device. It keeps track of relevant device information, including name, IP address, location, and state. It is the core model of the database system. Two devices cannot have the same name and location attributes. Additionally, no two devices can have the same IP address
+			\item \textit{Device Location:} This model represents the location in the household where a device can be found. A location can store many devices, but a device can only be in one location
+			\item \textit{Device State:} This model represents the various power states that a device can be in. It is initially populated with the values "on" and "off," however the user still has the ability to add more depending on device capability
+			\item \textit{Triggers:} This model represents the various triggers that the system can incorporate, namely, motion, temperature, and light
 			It stores an input device ID, an output device ID, and a string of Python code which will provide the conditions for the trigger to fire as well as the action to apply.
-			\item \textit{Actions:}  This model represents the various actions that can be taken by the system when a trigger is fired. Any number of Triggers can invoke the same Action.
-			\item \textit{Power Usage:} This model represents the power usage of the household devices at points in time. It stores power usage data for certain time intervals for each device, allowing time-series analysis of device power usage.
+			\item \textit{Actions:}  This model represents the various actions that can be taken by the system when a trigger is fired. Any number of Triggers can invoke the same Action
+			\item \textit{Power Usage:} This model represents the power usage of the household devices at points in time. It stores power usage data for certain time intervals for each device, allowing time-series analysis of device power usage
 		\end{itemize}
 		\item \textbf{Celery:} 
 		This is an asynchronous task queuing framework that supports scheduling and real-time operation. The Django application uses Celery in order to manage long running tasks such as trigger monitoring as well as controlling and monitoring devices. Using the default RabbitMQ message broker, and the MQTT messaging protocol, Celery communicates with Internet of Things devices over the network. 
@@ -636,7 +645,7 @@
 	\subsubsection{Security Requirements:}
 	Due to the fact that the system controls a user's home, it therefore requires security considerations to be taken into account.
 	\\\\
-	The system needs to ensure that only the user has access to the application to prevent external parties gaining control of the connected components within a house. This can be done with a signup, login and authentication process. 
+	The system needs to ensure that only authorised users have access to the application to prevent external parties gaining control of the connected components within the house. This can be done with a signup, login and authentication process. 
 	The components within the house that the application connects with, need to be protected from external parties and therefore they must be explicitly authenticated. 
 	
 	
@@ -655,13 +664,13 @@
 	\subsection{Key Modules Selected for Project Illustration:}
 	A few class modules have been written using Django, a high-level Python Web framework, in conjunction with a Bootstrap Theme, a powerful front-end framework, for the first prototype: 
 	\begin{enumerate}
-		\item Scrollable web-pages, with a page header and overall device information.
-		\item The addition and removal of device/s, along with corresponding specifications.
-		\item The adding and removing of user account/s in the system.
+		\item Scrollable web-pages, with a page header and overall device information
+		\item The addition and removal of device/s, along with corresponding specifications
+		\item The adding and removing of user account/s in the system
 		%\item Setting parameters which do not allow certain device characteristics when adding a device
-		\item Viewing the connected devices along with its details.
-		\item Toggling between the individual device's state.
-		\item Enable the user to log in into their user account.
+		\item Viewing the connected devices along with its details
+		\item Toggling between the individual device's state
+		\item Enable the user to log in into their user account
 	\end{enumerate}
 	
 	\subsection{Testing:}
@@ -689,7 +698,7 @@
 	The tests that have been written to demonstrate the functionality of the back-end are: 
 	\begin{enumerate}
 		\item Check that a device can be added to the database
-		\item Test that the system does not allow datatypes which do not fit the device specifications. For example, a user cannot enter a device IP address as "3498347", but instead it must be an IPv4 or IPv6 address. 
+		\item Test that the system does not allow datatypes which do not fit the device specifications. For example, a user cannot enter a device IP address as "3498347", but instead it must be an IPv4 or IPv6 address
 		\item Check that a certain home location cannot contain two devices with the same names. For example, a kitchen cannot contain "kettle 1" and "kettle 1" 
 		\item Test that no two devices can have the same IP address
 	\end{enumerate}
@@ -741,7 +750,7 @@
 			\item Configure docker to run server and database
 		\end{itemize}
 	\end{itemize}
-	
+	\vspace{-2mm}
 	Upon this discussion, with two weeks remaining till project submission, a sprint planning meeting was held in order to discuss and plan the work to be performed in the first sprint which would have a timebox of one week. A sprint backlog was drawn up on Trello (a software collaboration tool). The sprint backlog is a basic list of the tasks that must be implemented by the team in order to deliver a functional product increment at the end of that sprint \cite{sprintbacklogdef}. 
 	\newline
 	\newline
@@ -753,7 +762,7 @@
 		\caption{Screenshot of the Trello page drawn on the first day of the first sprint for the initial prototype implementation}
 		\label{fig:sprint_backlog_1}
 	\end{figure}
-	\newpage
+	
 	After the first week, a second sprint planning was held for the following week-long sprint. The screenshot below illustrates the new items that were now moved to the next sprint backlog. 
 	
 	\begin{figure}[H]
@@ -778,7 +787,7 @@
 	
 	The team should continue having productive and efficient sprint planning and sprint retrospective meetings at the beginning and end of each sprint. 
 	
-	Due to time constraints and other projects being worked on simultaneously, daily scrum meetings could not be held (meetings were help roughly every two days). Preferably these meetings should take place daily in order to encourage communication and help reduce the time spent on solving technical issues. 
+	Due to time constraints and other projects being worked on simultaneously, daily scrum meetings could not be held (meetings were held roughly every two days). Preferably these meetings should take place daily in order to encourage communication and help reduce the time spent on solving technical issues. 
 	The scrum master should also encourage continuous feedback during the sprint as ideas may be forgotten by the time the retrospective meeting occurs.
 	
 	\begin{figure} [H]
